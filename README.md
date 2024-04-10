@@ -1,8 +1,8 @@
-# CookieJar
+<h1><img src="https://github.com/sathirak/cookiejar/assets/145209193/70b4f569-3e9d-42ec-8105-7ff7e7c96804" width="50" height="50" /> CookieJar</h1>
 
 A JavaScript based CHrome extension that allows manipulating the chrome cookie manager
 
-<div align="center" width="400">
+<div align="center" width="300" height="300" >
   
 ![icon](https://github.com/sathirak/cookiejar/assets/145209193/70b4f569-3e9d-42ec-8105-7ff7e7c96804)
   
