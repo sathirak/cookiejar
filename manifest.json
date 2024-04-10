@@ -1,5 +1,5 @@
 {
-  "name": "Cookie Monster",
+  "name": "CookieJar",
   "version": "1.0",
   "content_scripts": [
     {

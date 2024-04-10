@@ -1,0 +1,1 @@
+A JavaScript based CHrome extension that allows manipulating the chrome cookie manager
