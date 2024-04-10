@@ -16,9 +16,9 @@ function handleCookieChange(changeInfo) {
     const url = protocol + cookie.domain + cookie.path;
     const time = new Date(cookie.expirationDate * 1000); // Convert expirationDate to milliseconds
 
-    setMessage(`<div id="message-module"> cookie ${cookie.name} on ${url} has been ${action}.</div>`);
+    setMessage(`<div id="message-module">${cookie.name} from ${url} has been ${action}.</div>`);
     // set_notification("Cookie Monitor", `Cookie ${cookie.name} on URL ${url} has been ${action}.`);
-    console.log(`<div id="message-module"> cookie ${cookie.name} on URL ${url} has been ${action}.</div>`);
+    console.log(`<div id="message-module">${cookie.name} from ${url} has been ${action}.</div>`);
 
 }
 

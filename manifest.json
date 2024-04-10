@@ -18,5 +18,10 @@
     "default_popup": "popup.html"
   },
   "host_permissions": ["<all_urls>"],
-  "manifest_version": 3
+  "manifest_version": 3,
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
 }
