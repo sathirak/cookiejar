@@ -16,7 +16,7 @@ function handleCookieChange(changeInfo) {
     const url = protocol + cookie.domain + cookie.path;
     const time = new Date(cookie.expirationDate * 1000); // Convert expirationDate to milliseconds
 
-    setMessage(`<div id="message-module" > cookie ${cookie.name} on ${url} has been ${action}.</div>`);
+    setMessage(`<div id="message-module"> cookie ${cookie.name} on ${url} has been ${action}.</div>`);
     // set_notification("Cookie Monitor", `Cookie ${cookie.name} on URL ${url} has been ${action}.`);
     console.log(`<div id="message-module"> cookie ${cookie.name} on URL ${url} has been ${action}.</div>`);
 
@@ -43,18 +43,26 @@ chrome.tabs.query({ active: true, currentWindow: true }, async function(tabs) {
 
 
 // Function to fetch cookies and update the cookie details
-// Function to fetch cookies and update the cookie details
 async function updateCookieDetails() {
+    // Get the current tab
+    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
-    const cookies = await chrome.cookies.getAll({ domain });
-    
+    // If there's no active tab, return
+    if (!tab) {
+        console.error("No active tab found");
+        return;
+    }
+
+    // Get cookies for the current tab
+    const cookies = await chrome.cookies.getAll({ url: tab.url });
+
     const cookieList = document.getElementById("cookieList");
     cookieList.innerHTML = "";
 
     if (cookies.length > 0) {
         const numberOfCookies = cookies.length;
         const metaDetails = document.createElement("p");
-        metaDetails.innerHTML = `cookie count ${numberOfCookies} <br> for ${domain}`;
+        metaDetails.innerHTML = `cookie count ${numberOfCookies} <br> for ${tab.url}`;
         cookieList.appendChild(metaDetails);
 
         for (const cookie of cookies) {
@@ -81,6 +89,7 @@ async function updateCookieDetails() {
         cookieList.appendChild(li);
     }
 }
+
 
 // Update cookie details initially
 updateCookieDetails();
