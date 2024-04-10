@@ -11,3 +11,5 @@ A JavaScript based CHrome extension that allows manipulating the chrome cookie m
 
 ## Screenshots
 ![Screenshot 2024-04-10 163607](https://github.com/sathirak/cookiejar/assets/145209193/98bbaf90-b269-4724-836d-054094973ae0)
+
+UIcons by <a href="https://www.flaticon.com/uicons">Flaticon</a>
