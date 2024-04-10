@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			html {
+				border-color: rgba(202, 184, 20, 0.6);
+				border-width: 2px;
+				border-radius: 5px;
+				border-style: solid;
+			}
+
+			body {
+				margin: 0;
+				width: 300px;
+				font-family: monospace;
+				background-color: #f7f7f7;
+				padding: 5px;
+			}
+
+			h1 {
+				text-align: center;
+				color: #333;
+				border: 0 solid #e5e7eb;
+				position: relative;
+				margin: 4px;
+				padding-top: 3.5px;
+				padding-bottom: 3.5px;
+				padding-left: 0.25rem;
+				padding-right: 0.25rem;
+				color: rgb(117, 77, 4);
+				border-bottom-width: 2px;
+				border-radius: 0.25rem;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			h2 {
+				color: rgb(117, 77, 4);
+				padding-inline-start: 25px;
+			}
+
+			@keyframes vibrate {
+				0% {
+					transform: translateX(-2px);
+				}
+				25% {
+					transform: translateX(2px);
+				}
+				50% {
+					transform: translateX(-2px);
+				}
+				75% {
+					transform: translateX(2px);
+				}
+				100% {
+					transform: translateX(0);
+				}
+			}
+
+			#message-module {
+				animation: vibrate 0.5s ease;
+			}
+
+			#message {
+				width: 275px;
+				line-height: 1.5;
+				padding: 10px;
+				border-radius: 5px;
+				margin-bottom: 20px;
+				margin-inline-start: 15px;
+			}
+
+			button {
+				cursor: pointer;
+				border: 0 solid #e5e7eb;
+				position: relative;
+				margin: 4px;
+				padding-top: 1.5px;
+				padding-bottom: 1.5px;
+				padding-left: 0.25rem;
+				padding-right: 0.25rem;
+				background-color: rgba(202, 160, 20, 0.1);
+				border-color: rgba(202, 184, 20, 0.6);
+				color: rgb(117, 77, 4);
+				border-bottom-width: 2px;
+				border-radius: 0.25rem;
+			}
+
+			li {
+				width: 250px;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				margin-block: 8px;
+			}
+
+			li span {
+				width: 150px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				color: rgb(150, 116, 24);
+			}
+		</style>
+		<script src="app.js" type="module"></script>
+	</head>
+	<body>
+		<h1> <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="24" height="24" fill="rgb(117, 77, 4)" ><circle cx="9.5" cy="9.5" r="1.5"/><circle cx="18.5" cy="1.5" r="1.5"/><circle cx="21.5" cy="6.5" r="1.5"/><circle cx="9.5" cy="14.5" r="1.5"/><circle cx="14.5" cy="14.5" r="1.5"/><path d="M23.943,10.854a1,1,0,0,0-.9-.9A10,10,0,0,1,14.048.958a1,1,0,0,0-.9-.9C12.769.021,12.387,0,12,0A12,12,0,1,0,24,12C24,11.613,23.979,11.231,23.943,10.854ZM12,22A10,10,0,0,1,12,2l.17,0A12.006,12.006,0,0,0,22,11.83c0,.057,0,.113,0,.17A10.011,10.011,0,0,1,12,22Z"/></svg>
+			Cookie Jar</h1>
+			<h2>Currently Changing	</h2>
+		<p id="message">No messages.</p>
+		<div id="cookieDetails">
+			<h2>Cookie List</h2>
+			<ul id="cookieList"></ul>
+		</div>
+	</body>
+</html>
