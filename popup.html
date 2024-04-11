@@ -3,10 +3,11 @@
 	<head>
 		<style>
 			html {
-				border-color: rgba(202, 184, 20, 0.6);
+				border-color: rgba(202, 184, 20, 0.6);			
 				border-width: 2px;
 				border-radius: 5px;
 				border-style: solid;
+				border-right-width: 0;
 			}
 
 			body {
@@ -31,9 +32,6 @@
 				padding-bottom: 3.5px;
 				padding-left: 0.25rem;
 				padding-right: 0.25rem;
-				color: rgb(117, 77, 4);
-				border-bottom-width: 2px;
-				border-radius: 0.25rem;
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
@@ -41,7 +39,7 @@
 				gap: 10px;
 			}
 
-			h2 {
+			h2, h3, h4 {
 				text-align: left;
 				color: rgb(117, 77, 4);
 				padding-inline-start: 25px;
@@ -97,6 +95,11 @@
 				border-radius: 0.25rem;
 			}
 
+			ul{
+				width: 250px;
+				overflow-wrap: break-word;
+			}
+
 			li {
 				width: 250px;
 				display: flex;
@@ -129,6 +132,7 @@
 			::-webkit-scrollbar-corner {
 				background: #ffd175;
 			}
+
 		</style>
 		<script src="app.js" type="module"></script>
 	</head>
@@ -172,6 +176,11 @@
 		<div id="cookieDetails">
 			<h2>Cookie List</h2>
 			<ul id="cookieList"></ul>
+		</div>
+
+		<div id="storageDetails">
+			<h2>Storage List</h2>
+			<ul id="storageList"></ul>
 		</div>
 		
 	</body>
